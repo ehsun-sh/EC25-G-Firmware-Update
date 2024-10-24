@@ -1,0 +1,48 @@
+UART DOWNLOAD MODE
+
+Normal seperate burn
+step1 connect
+FlashToolCLI.exe --cfgfile config_ec618_uart.ini --port COM47 probe
+
+step2 erase
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_uart.ini --port COM47 flasherase 0 0x400000
+
+step3 burn
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_uart.ini --port COM47 burnbatch --imglist bootloader system cp_system
+
+step4 reset
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_uart.ini --port COM47 sysreset
+
+
+USB DOWNLOAD MODE
+step1 connect
+FlashToolCLI.exe --cfgfile config_ec618_usb.ini --port COM47 probe
+
+step2 erase
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_usb.ini --port COM47 flasherase 0 0x400000
+
+step3 burn
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_usb.ini --port COM47 burnbatch --imglist bootloader system flexfile0 flexfile1
+
+step4 reset
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_usb.ini --port COM47 sysreset
+
+
+Package burn
+step 1,  package extract and check
+FlashToolCLI.exe --cfgfile config_ec618_uart.ini pkg2img
+
+step 2 connect
+FlashToolCLI.exe --cfgfile config_ec618_uart.ini --port COM25 probe
+
+step 3 erase
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_uart.ini --port COM25 flasherase 0 0x400000 --stor_type "ap_flash"
+
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_uart.ini --port COM25 flasherase 0 0x100000 --stor_type "cp_flash"
+
+step 4 burn
+#if flexfile configured in config_ec618_uart.ini, add flexfile0 to --imglist ,like --imglist bootloader system cp_system flexfile0
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_uart.ini --verbose 1 --port COM25 burnbatch --imglist bootloader system cp_system
+
+step5 reset
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_uart.ini --port COM25 sysreset

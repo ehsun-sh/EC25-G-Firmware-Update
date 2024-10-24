@@ -1,0 +1,21 @@
+UART DOWNLOAD MODE
+config config_pkg_product_usb.ini in section [package_info]
+arg_pkg_path_val =C:\XXX\YYY\EC800ZCNLER03A01M04_BETA20230711\at_command.binpkg 
+
+Package burn
+step 1,  package extract and check
+FlashToolCLI.exe --cfgfile config_pkg_product_usb.ini pkg2img
+
+step 2 connect
+FlashToolCLI.exe --cfgfile config_pkg_product_usb.ini --port COM25 probe
+
+step 3 erase
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_pkg_product_usb.ini --port COM25 flasherase 0 0 --stor_type "intrinsic_flash"
+
+
+step 4 burn
+#if flexfile configured in config_ec618_uart.ini, add flexfile0 to --imglist ,like --imglist bootloader system cp_system flexfile0
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_pkg_product_usb.ini --verbose 1 --port COM25 burnbatch --imglist bootloader system cp_system
+
+step5 reset
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_pkg_product_usb.ini --port COM25 sysreset

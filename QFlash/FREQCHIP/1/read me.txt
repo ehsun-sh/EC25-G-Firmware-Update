@@ -1,0 +1,48 @@
+2023.04.18
+修改断开连接后重启芯片
+
+2022.07.22
+新增握手超时参数-t
+
+2022.01.14
+在烧录完成前,新增disconnect 指令
+
+
+2021.08.02-2
+修改DTS RTS时序
+setRTS(True)
+setDTR(False)
+sleep(200)
+setRTS(False)
+
+2021.08.02
+修改DTS RTS时序
+
+setDTR(True)
+setRTS(True)
+sleep(200)
+setRTS(False)
+
+2021.07.26
+1.新增运行打印版本号
+2.修改协议 progress 为Progress
+3.新增flush 输出
+4.新增DTS RTS 时序控制
+	DTS = FALSE
+	RTS = FALSE
+	SLEEP(200)
+	RTS = TRUE
+
+
+
+
+2021.07.19
+1.新增exe版本信息,版本1.0.2
+2.增加拔出串口异常消息
+3.修改打开固件异常消息
+4.修改总体进度提示
+5.新增10秒握手超时处理
+
+2021.07.12
+freqchip_flash_tool_v1.0.1.exe
+修改芯片增加写保护时, 无法烧录的问题

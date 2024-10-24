@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<api_tasks>
+  <ToolLogLevel class="SetLogInfoTask">
+    <info_key>level</info_key>
+    <info_value>Debug</info_value>
+    <!-- 1:Trace, 2:Detail, 3:Debug, 4:Info, 5:Warning, 6:Error -->
+  </ToolLogLevel>
+  <DetailLogLevel class="SetLogInfoTask">
+    <info_key>level</info_key>
+    <info_value>Detail</info_value>
+  </DetailLogLevel>
+  <DebugLogLevel class="SetLogInfoTask">
+    <info_key>level</info_key>
+    <info_value>Debug</info_value>
+  </DebugLogLevel>
+  <InfoLogLevel class="SetLogInfoTask">
+    <info_key>level</info_key>
+    <info_value>Info</info_value>
+  </InfoLogLevel>
+  <SendToolLog class="LogWriteMessageTask">
+    <level>2</level>
+    <msg>Message</msg>
+  </SendToolLog>
+  <SetLogDirname class="SetLogInfoTask">
+    <info_key>dirname</info_key>
+    <info_value></info_value>
+  </SetLogDirname>
+  <SetLogNamePostfix class="SetLogInfoTask">
+    <info_key>log_name_postfix</info_key>
+    <info_value></info_value>
+  </SetLogNamePostfix>
+  <LoggingCallbackSetId class="LoggingCallbackTask">
+    <race_type></race_type>
+    <race_id></race_id>
+  </LoggingCallbackSetId>
+  <ClearLog class="ClearLogTask">
+    <before_days>14</before_days>
+  </ClearLog>
+  <OpenLog class="LogConnectTask">
+    <action>open</action>
+    <log_id>LOG_RAW</log_id>
+    <prefix_name>logging</prefix_name>
+  </OpenLog>
+  <CloseLog class="LogConnectTask">
+    <action>close</action>
+    <log_id>LOG_RAW</log_id>
+    <postfix_name></postfix_name>
+  </CloseLog>
+  <SwitchNewLog class="LogConnectTask">
+    <action>switch_new</action>
+    <log_id>LOG_TOOL</log_id>
+    <close_append></close_append>
+    <open_name></open_name>
+  </SwitchNewLog>
+  <GetLogPath class="LogGetPathTask">
+    <log_id>LOG_TOOL</log_id>
+  </GetLogPath>
+  <LoadMsgId class="LogBinLoadFileTask">
+    <processor>0</processor>
+    <path>AB1562_log.bin</path>
+  </LoadMsgId>
+  <GetMsgIdCount class="LogBinGetCountTask">
+    <processor>0</processor>
+  </GetMsgIdCount>
+  <GetMsgIdString class="LogBinGetStringTask">
+    <processor>0</processor>
+    <index>0</index>
+  </GetMsgIdString>
+  <LogOfflineDumpInfo class="LogOfflineDumpInfoTask">
+    <path>dump.bin</path>
+  </LogOfflineDumpInfo>
+  <LogExceptionFullDump class="LogExceptionFullDumpTask">
+    <input_log_file_path>D:\\Slot0_20180209_144238.txt</input_log_file_path>
+    <out_file_path>D:\\AB1562.out</out_file_path>
+    <elf_file_path>D:\\AB1568.elf</elf_file_path>
+  </LogExceptionFullDump>
+  <LogExceptionMiniDump class="LogExceptionMiniDumpTask">
+    <input_log_file_path>D:\\Slot0_20180209_144238.txt</input_log_file_path>
+    <out_file_path>D:\\AB1562.out</out_file_path>
+    <elf_file_path>D:\\AB1568.elf</elf_file_path>
+  </LogExceptionMiniDump>
+
+  <UnitTestTask class="UnitTestTask">
+    <arg1>0</arg1>
+  </UnitTestTask>
+
+  <airoha_cmd class="AirohaCommandTask">
+    <command_xml>command_dut.xml</command_xml>
+    <device_name>DUT</device_name>
+  </airoha_cmd>
+
+  <!-- Connection -->
+  <GetBaudrate class="UartGetBaudrateTask">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+  </GetBaudrate>
+  <SendBreak class="UartSendBreakTask">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <time_ms>50</time_ms>
+  </SendBreak>
+  <UartToggleRts class="UartToggleRtsTask">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <time_ms>50</time_ms>
+  </UartToggleRts>
+
+  <ConnectLogFile class="ConnectDevice">
+    <device_type>FILE</device_type>
+    <device_name>DUT</device_name>
+    <action>connect</action>
+    <path>D:\raw.bin</path>
+    <is_binary>true</is_binary>
+    <transport>h4</transport>
+    <handshake>None</handshake>
+  </ConnectLogFile>
+
+  <ConnectSerialHost class="ConnectDevice">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>connect</action>
+    <port>69</port>
+    <rate>3000000</rate>
+    <transport>h4</transport>
+    <!-- value: "h4" or "h5" -->
+    <handshake>None</handshake>
+    <!-- value: "None" or "XOnXOff" -->
+    <listen_fw_log>true</listen_fw_log>
+  </ConnectSerialHost>
+
+  <ConnectDUT class="ConnectDevice">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>connect</action>
+    <port>3</port>
+    <rate>3000000</rate>
+    <transport>h4</transport>
+    <handshake>None</handshake>
+    <connected_by_usb>false</connected_by_usb>
+  </ConnectDUT>
+
+  <ConnectDutByUsbHid class="ConnectDevice">
+    <device_type>USB_HID</device_type>
+    <device_name>DUT</device_name>
+    <action>connect</action>
+    <vendor_id>0x0E8D</vendor_id>
+    <product_id>0x0808</product_id>
+    <usage_page>0xFF13</usage_page>
+    <serial_number></serial_number>
+    <transport>RACE</transport>
+    <handshake>None</handshake>
+  </ConnectDutByUsbHid>
+
+  <ChangeH4BleTransport class="ConnectDevice">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>change_transport</action>
+    <transport>h4_ble</transport>
+    <conn_handle/>
+    <tx_att_handle/>
+    <rx_att_handle/>
+  </ChangeH4BleTransport>
+
+  <ChangeSerialTransport class="ConnectDevice">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>change_transport</action>
+    <transport>h4</transport>
+  </ChangeSerialTransport>
+  <DisconnectDUT class="ConnectDevice">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>disconnect</action>
+    <listen_fw_log>true</listen_fw_log>
+  </DisconnectDUT>
+
+  <ConnectTCB class="ConnectDevice">
+    <device_type>UART</device_type>
+    <device_name>TCB</device_name>
+    <action>connect</action>
+    <port>100</port>
+    <rate>115200</rate>
+    <transport>h4</transport>
+    <listen_fw_log>true</listen_fw_log>
+  </ConnectTCB>
+  <DisconnectTCB class="ConnectDevice">
+    <device_type>UART</device_type>
+    <device_name>TCB</device_name>
+    <action>disconnect</action>
+    <listen_fw_log>true</listen_fw_log>
+  </DisconnectTCB>
+
+  <ConnectSLT class="ConnectDevice">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>connect</action>
+    <port>3</port>
+    <rate>3000000</rate>
+    <transport>ascii</transport>
+    <listen_fw_log>true</listen_fw_log>
+  </ConnectSLT>
+  <DisconnectSLT class="ConnectDevice">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>disconnect</action>
+    <listen_fw_log>true</listen_fw_log>
+  </DisconnectSLT>
+  <TaskSltTest class="SltTest">
+    <device_name>DUT</device_name>
+    <timeout>70000</timeout>
+  </TaskSltTest>
+
+  <PhoneConnection class="ConnectDevice">
+    <device_type>TCP</device_type>
+    <device_name>DUT</device_name>
+    <action>connect</action>
+    <port>12345</port>
+    <ip>127.0.0.1</ip>
+    <transport>h4</transport>
+  </PhoneConnection>
+
+  <OpenPipeToWireshark class="ConnectPipeToWiresharkTask">
+    <wireshark_path>D:\Wireshark_Release\Wireshark.exe</wireshark_path>
+    <output_pcapng_file_name>Logging</output_pcapng_file_name>
+    <switch_next_file_after_num_kb>20480</switch_next_file_after_num_kb>
+    <auto_scroll_to_bottom>true</auto_scroll_to_bottom>
+    <port_name>COM1</port_name>
+  </OpenPipeToWireshark>
+  <ClosePipeToWireshark class="ConnectPipeToWiresharkTask">
+    <port_name>COM1</port_name>
+  </ClosePipeToWireshark>
+  <OpenPipeToProcess class="ConnectPipeToProcess">
+    <exe_path>./log_handler/pipe_to_handler.exe</exe_path>
+    <exe_param></exe_param>
+    <exe_showcmd>0</exe_showcmd>
+    <port_name>COM1</port_name>
+  </OpenPipeToProcess>
+  <ClosePipeToProcess class="ConnectPipeToProcess">
+    <port_name>COM1</port_name>
+  </ClosePipeToProcess>
+  <OpenPipeReader class="ConnectPipeReaderTask">
+    <device_type>PIPE</device_type>
+    <device_name>LOG_HANDLE</device_name>
+    <pipe_name>\\.\pipe\tool_log_handler</pipe_name>
+    <transport>h4</transport>
+  </OpenPipeReader>
+  <ClosePipeReader class="ConnectPipeReaderTask">
+    <device_name>LOG_HANDLE</device_name>
+  </ClosePipeReader>
+
+  <OpenLoggingToFile class="ConnectLoggingToFileTask">
+    <filename>syslog</filename>
+    <enable_stdout>true</enable_stdout>
+    <enable_btsnoop>true</enable_btsnoop>
+    <enable_audio_dump>true</enable_audio_dump>
+    <audio_dump_dir>audio_dump_</audio_dump_dir>
+    <dump_id_csv>setting/audio_dump_id.bak.csv</dump_id_csv>
+  </OpenLoggingToFile>
+  <CloseLoggingToFile class="ConnectLoggingToFileTask">
+  </CloseLoggingToFile>
+
+  <!-- Tcb 1 to 8 -->
+  <ConnectTCB1to8_PoweronDUT class="Tcb1to8ConnectTask">
+    <action>connect_poweron</action>
+    <port>62</port>
+    <rate>115200</rate>
+    <power_mv>0</power_mv>
+    <max_battery_current_mA>60</max_battery_current_mA>
+    <enable_charge>true</enable_charge>
+    <vccio_cV>180</vccio_cV>
+    <sws_regen>low</sws_regen>
+  </ConnectTCB1to8_PoweronDUT>
+  <PoweroffDUT_DisconnectTCB1to8 class="Tcb1to8ConnectTask">
+    <action>poweroff_disconnect</action>
+  </PoweroffDUT_DisconnectTCB1to8>
+  <Connect__TCB1to8 class="Tcb1to8ConnectTask">
+    <action>connect_only</action>
+    <port>62</port>
+    <rate>115200</rate>
+  </Connect__TCB1to8>
+  <Disconnect__TCB1to8 class="Tcb1to8ConnectTask">
+    <action>disconnect</action>
+  </Disconnect__TCB1to8>
+  <TCB1to8_Version class="Tcb1to8ConnectTask">
+    <action>version</action>
+  </TCB1to8_Version>
+
+  <TCB1to8_ChargeOn class="Tcb1to8PowerTask">
+    <action>chargingon</action>
+    <board_slot>0</board_slot>
+    <enable_charge>true</enable_charge>
+  </TCB1to8_ChargeOn>
+  <TCB1to8_ChargeOff class="Tcb1to8PowerTask">
+    <action>chargingon</action>
+    <board_slot>0</board_slot>
+    <enable_charge>false</enable_charge>
+  </TCB1to8_ChargeOff>
+  <TCB1to8_Power class="Tcb1to8PowerTask">
+    <action>vbat_adc</action>
+    <board_slot>0</board_slot>
+    <vccio_cV>180</vccio_cV>
+    <power_mv>3300</power_mv>
+    <max_battery_current_mA>60</max_battery_current_mA>
+    <enable_charge>false</enable_charge>
+  </TCB1to8_Power>
+  <TCB1to8_Data class="Tcb1to8DataTask">
+    <action>read</action>
+    <board_slot>0</board_slot>
+    <tlv_tag>0</tlv_tag>
+    <hex_data>00</hex_data>
+  </TCB1to8_Data>
+
+  <TCB1to8_LEDOn class="Tcb1to8LedTask">
+    <action>led_red</action>
+    <board_slot>0</board_slot>
+    <turn_on>true</turn_on>
+  </TCB1to8_LEDOn>
+  <TCB1to8_LEDOnRed class="Tcb1to8LedTask">
+    <board_slot>0</board_slot>
+    <action>led_red</action>
+    <turn_on>true</turn_on>
+  </TCB1to8_LEDOnRed>
+  <TCB1to8_LEDOnGreen class="Tcb1to8LedTask">
+    <board_slot>0</board_slot>
+    <action>led_green</action>
+    <turn_on>true</turn_on>
+  </TCB1to8_LEDOnGreen>
+  <TCB1to8_LEDOnBlue class="Tcb1to8LedTask">
+    <board_slot>0</board_slot>
+    <action>led_blue</action>
+    <turn_on>true</turn_on>
+  </TCB1to8_LEDOnBlue>
+  <TCB1to8_LEDOnAll class="Tcb1to8LedTask">
+    <board_slot>0</board_slot>
+    <action>led_all</action>
+    <turn_on>true</turn_on>
+  </TCB1to8_LEDOnAll>
+  <TCB1to8_LEDOffRed class="Tcb1to8LedTask">
+    <board_slot>0</board_slot>
+    <action>led_red</action>
+    <turn_on>false</turn_on>
+  </TCB1to8_LEDOffRed>
+  <TCB1to8_LEDOffGreen class="Tcb1to8LedTask">
+    <board_slot>0</board_slot>
+    <action>led_green</action>
+    <turn_on>false</turn_on>
+  </TCB1to8_LEDOffGreen>
+  <TCB1to8_LEDOffBlue class="Tcb1to8LedTask">
+    <board_slot>0</board_slot>
+    <action>led_blue</action>
+    <turn_on>false</turn_on>
+  </TCB1to8_LEDOffBlue>
+  <TCB1to8_LEDOffAll class="Tcb1to8LedTask">
+    <board_slot>0</board_slot>
+    <action>led_all</action>
+    <turn_on>false</turn_on>
+  </TCB1to8_LEDOffAll>
+
+  <TCB1to8_Crystal class="Tcb1to8CrystalTask">
+    <action>trim32k</action>
+    <board_slot>0</board_slot>
+    <resolution>1</resolution>
+    <!-- 1ppm: 0, 0.5ppm: 1, 0.25ppm: 2, 0.2ppm: 3 -->
+    <nxo>2560000</nxo>
+  </TCB1to8_Crystal>
+  <TCB1to8_Crystal_Start class="Tcb1to8CrystalTask">
+    <action>trim32k_start</action>
+    <board_slot>0</board_slot>
+    <resolution>1</resolution>
+    <!-- 1ppm: 0, 0.5ppm: 1, 0.25ppm: 2, 0.2ppm: 3 -->
+    <nxo>2560000</nxo>
+  </TCB1to8_Crystal_Start>
+  <TCB1to8_Crystal_Check class="Tcb1to8CrystalTask">
+    <action>trim32k_check</action>
+    <board_slot>0</board_slot>
+  </TCB1to8_Crystal_Check>
+
+  <ResetDutToTest__TCB1to8 class="ResetDutWithTcb1to8Task">
+    <device_name>DUT</device_name>
+    <board_slot>0</board_slot>
+    <is_reset_N>true</is_reset_N>
+    <delay_in_reset>50</delay_in_reset>
+    <delay_after_reset>1000</delay_after_reset>
+    <enable_switch_h5>false</enable_switch_h5>
+  </ResetDutToTest__TCB1to8>
+  <ResetDutToDownload__TCB1to8 class="ResetDutWithTcb1to8Task">
+    <device_name>DUT</device_name>
+    <board_slot>0</board_slot>
+    <is_reset_N>true</is_reset_N>
+    <delay_in_reset>50</delay_in_reset>
+    <delay_after_reset>1000</delay_after_reset>
+    <enable_switch_h5>false</enable_switch_h5>
+  </ResetDutToDownload__TCB1to8>
+
+  <!-- Write Command -->
+  <WriteIramLabTest class="DownloadDaByTcbTask">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <filename>./DaCode/AB1562_CommitId_31f19.bin</filename>
+  </WriteIramLabTest>
+  <WriteIramFlashWriter class="DownloadDaByTcbTask">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <filename>./DaCode/AB1562_CommitId_31f19.bin</filename>
+    <timeout>6000</timeout>
+  </WriteIramFlashWriter>
+
+  <DownloadDa_OneWire class="DownloadDaOneWireTask">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <baud_rate_for_write_da>921600</baud_rate_for_write_da>
+    <baud_rate_after_write_da_done>3000000</baud_rate_after_write_da_done>
+    <handshake>None</handshake>
+    <!-- value: "None" or "XOnXOff" -->
+    <da_file>./DaCode/da_1wire.bin</da_file>
+    <trap_pattern>06600990</trap_pattern>
+    <trap_resp>F99FF66F</trap_resp>
+    <timeout>10000</timeout>
+    <cert_file>./cert/flash_tool.cert</cert_file>
+    <chip_id>AB1568</chip_id>
+    <switch_da_log>true</switch_da_log>
+  </DownloadDa_OneWire>
+
+  <DownloadDa_UART class="DownloadDaUartTask">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <baudrate>3000000</baudrate>
+    <bypass_handshake>false</bypass_handshake>
+    <timeout>10000</timeout>
+    <cert_file>./cert/flash_tool.cert</cert_file>
+    <switch_da_log>true</switch_da_log>
+  </DownloadDa_UART>
+
+  <DisableFwDbgMsg class="DisableDebugMessageTask">
+    <device_name>DUT</device_name>
+    <delay_before_run>1000</delay_before_run>
+  </DisableFwDbgMsg>
+
+  <CrystalTrimTableMethod class="CrystalTrimTableMethodTask">
+    <device_name>DUT</device_name>
+    <output_pin>XTAL_UART_TX</output_pin>
+    <target_ppm>0</target_ppm>
+    <initial_cap>111</initial_cap>
+    <cap_limit_max>511</cap_limit_max>
+    <cap_limit_min>0</cap_limit_min>
+  </CrystalTrimTableMethod>
+
+  <!-- flash -->
+  <RaceDaWriteFlashFromCfg class="RaceDaWriteFlashFromCfgTask">
+    <device_name>DUT</device_name>
+    <cfg_filename>D:\\flash_download.cfg</cfg_filename>
+    <bin_map>0xFFFF</bin_map>
+    <security>false</security>
+    <mp_test>false</mp_test>
+    <sliding_windows>3</sliding_windows>
+  </RaceDaWriteFlashFromCfg>
+
+  <OneWireWriteFlashFromCfg class="RaceDaWriteFlashFromCfgTask">
+    <device_name>DUT</device_name>
+    <cfg_filename>D:\\flash_download.cfg</cfg_filename>
+    <bin_map>0xFFFF</bin_map>
+    <security>false</security>
+    <mp_test>false</mp_test>
+    <sliding_windows>0</sliding_windows>
+  </OneWireWriteFlashFromCfg>
+
+  <GetBinInfo class="GetBinInfoTask">
+    <device_name>DUT</device_name>
+    <cfg_filename>D:\\flash_download.cfg</cfg_filename>
+  </GetBinInfo>
+
+  <EraseFlash class="EraseFlashTask">
+    <device_name>DUT</device_name>
+    <start_address>0</start_address>
+    <erase_byte_length>4096</erase_byte_length>
+  </EraseFlash>
+
+  <NvkeyXmlToBin class="GenerateBinFromNvkeyXmlTask">
+    <xml_files></xml_files>
+    <bin_filename></bin_filename>
+    <number_of_k_bytes>20</number_of_k_bytes>
+    <!-- It shoud be 4's multile. -->
+    <has_protect_4k>1</has_protect_4k>
+  </NvkeyXmlToBin>
+
+  <RofsXmlToBin class="GenerateBinFromRofsXmlTask">
+    <xml_filename></xml_filename>
+    <bin_filename></bin_filename>
+    <media_folder_path></media_folder_path>
+    <bin_file_size></bin_file_size>
+    <!--k bytes-->
+  </RofsXmlToBin>
+
+  <fileCrc16Calculation class="CalculateFileCrc16Task">
+    <filename></filename>
+    <crc_init>0xFFFF</crc_init>
+    <file_offset_to_flash>0x0000</file_offset_to_flash>
+    <header_address>0x0000</header_address>
+  </fileCrc16Calculation>
+
+  <ExportReadonlyNvkeyToNvrFile class="ReadNvkeyReadonlyToNvrTask">
+    <device_name>DUT</device_name>
+    <filename>out.nvr</filename>
+  </ExportReadonlyNvkeyToNvrFile>
+
+  <FlashRestoreNV class="ImportNvrToBin">
+    <bin_file_path>AB1562.bin</bin_file_path>
+    <nvr_file_path>backup_mp.nvr</nvr_file_path>
+    <restore_file_path>AB162wMP.bin</restore_file_path>
+  </FlashRestoreNV>
+
+  <TaskSetBdKey class="SetBdKeyTask">
+    <device_name>DUT</device_name>
+    <bd_key>0000ABCD1234</bd_key>
+  </TaskSetBdKey>
+
+  <TaskCheckBt3Address class="CheckBt3Address">
+    <device_name>1530DUT</device_name>
+    <start_bd_address>000000000001</start_bd_address>
+    <end_bd_address>FFFFFFFFFFFFFF</end_bd_address>
+  </TaskCheckBt3Address>
+
+  <TaskCheckBt4Address class="CheckBt4Address">
+    <device_name>1530DUT</device_name>
+    <start_bd_address>000000000001</start_bd_address>
+    <end_bd_address>FFFFFFFFFFFFFF</end_bd_address>
+  </TaskCheckBt4Address>
+
+  <SetBt3BdAddress class="SetBdAddressTask">
+    <device_name>DUT</device_name>
+    <bt_version>3</bt_version>
+    <bd_address>0000ABCD1234</bd_address>
+    <is_bt3_addr_from_barcode>false</is_bt3_addr_from_barcode>
+    <bt3_addr_from_barcode>000000000000</bt3_addr_from_barcode>
+  </SetBt3BdAddress>
+
+  <SetBt4BdAddress class="SetBdAddressTask">
+    <device_name>DUT</device_name>
+    <bt_version>4</bt_version>
+    <bd_address>112233445566</bd_address>
+    <is_bt4_addr_from_barcode>false</is_bt4_addr_from_barcode>
+    <bt4_addr_from_barcode>000000000000</bt4_addr_from_barcode>
+  </SetBt4BdAddress>
+
+  <!-- air dongle command -->
+  <startFota class="DongleStartFotaTask">
+    <device_name>DUT</device_name>
+    <fota_package_filename></fota_package_filename>
+    <file_system_filename></file_system_filename>
+    <is_dual_fota>false</is_dual_fota>
+    <!-- true for dual FOTA -->
+    <fota_via_air_update_dongle>true</fota_via_air_update_dongle>
+    <!-- true for AUD, false for UART -->
+    <!--<connection_timeout_ms>2000</connection_timeout_ms>-->
+    <connection_timeout_ms>2000</connection_timeout_ms>
+    <target_bd_address>0x112233445566</target_bd_address>
+    <minimum_battery_level>30</minimum_battery_level>
+    <!-- percentage. e.g. 30% -->
+    <is_via_153x_ota_dongle>true</is_via_153x_ota_dongle>
+    <check_pre_version></check_pre_version>
+    <check_post_version></check_post_version>
+    <is_update_nvr>false</is_update_nvr>
+    <is_update_devname>false</is_update_devname>
+    <devname_nvr_filename></devname_nvr_filename>
+    <nvr_filename></nvr_filename>
+    <actions_after_fota_finished>0</actions_after_fota_finished>
+  </startFota>
+
+  <generateFotaPackage class="TaskGenerateFotaPackage" >
+    <source_filename>flash_image.bin</source_filename>
+    <!-- 0: None, 1: Lzma, 2: Lzma+AES -->
+    <compression_type>1</compression_type>
+    <!-- 0: CRC32, 1: SHA256, 2: SHA256+RSA (not supported now) -->
+    <compression_level>0</compression_level>
+    <!-- 0 ~ 9 -->
+    <compression_dictionary_size>0x4000</compression_dictionary_size>
+    <!-- LZMA dic. size -->
+    <aes_key>0x000102030405060708090A0B0C0D0E0F</aes_key>
+    <!-- 16 bytes key -->
+    <aes_iv>0x62633636633839306334636432383763</aes_iv>
+    <!-- 16 bytes initial vector -->
+    <integrity_check_type>1</integrity_check_type>
+    <mover_info></mover_info>
+    <!-- pairs of
+                  offset,length,destination address;
+                  offset,length,destination address ...
+                   e.g. 0x1000,0x4000,0x1000;
+                        0x7000,0x1000,0xF000 -->
+    <output_filename>fota_pkg.bin</output_filename>
+    <version></version>
+    <!-- max 32 bytes ASCII string including ending \0 -->
+    <customized_data></customized_data>
+  </generateFotaPackage>
+
+  <generateFileSystemImage class="TaskGenerateFileSystemImage">
+    <source_filename></source_filename>
+    <output_filename></output_filename>
+  </generateFileSystemImage>
+
+  <TaskUpdateNvKey class="UpdateNvKey">
+    <device_name>DUT</device_name>
+    <nvr_filename></nvr_filename>
+    <fota_via_air_update_dongle>true</fota_via_air_update_dongle>
+    <!-- true for AUD, false for UART -->
+    <connection_timeout_ms>2000</connection_timeout_ms>
+    <target_bd_address>0x112233445566</target_bd_address>
+    <minimum_battery_level>30</minimum_battery_level>
+    <!-- percentage. e.g. 30% -->
+    <do_verification>true</do_verification>
+    <is_via_153x_ota_dongle>false</is_via_153x_ota_dongle>
+    <actions_after_fota_finished>3</actions_after_fota_finished>
+  </TaskUpdateNvKey>
+
+  <!-- SAMD21 I2C command -->
+  <Samd21_I2C_SetClock class="Samd21I2cCommand">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>set_clock</action>
+    <clock_frequency>400000</clock_frequency>
+  </Samd21_I2C_SetClock>
+  <Samd21_I2C_Write class="Samd21I2cCommand">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>addr2b_write</action>
+    <i2c_dev_addr>0x6B</i2c_dev_addr>
+    <i2c_reg_addr>0x9800</i2c_reg_addr>
+    <i2c_reg_data>0x0001</i2c_reg_data>
+  </Samd21_I2C_Write>
+  <Samd21_I2C_Read class="Samd21I2cCommand">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>addr2b_read</action>
+    <i2c_dev_addr>0x6B</i2c_dev_addr>
+    <i2c_reg_addr>0x0000</i2c_reg_addr>
+    <i2c_read_size>100</i2c_read_size>
+  </Samd21_I2C_Read>
+  <Samd21_I2C_Addr1B_Write class="Samd21I2cCommand">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>addr1b_write</action>
+    <i2c_dev_addr>0x20</i2c_dev_addr>
+    <i2c_reg_addr>0x09</i2c_reg_addr>
+    <i2c_reg_data>0x02</i2c_reg_data>
+  </Samd21_I2C_Addr1B_Write>
+  <Samd21_I2C_Addr1B_Read class="Samd21I2cCommand">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>addr1b_read</action>
+    <i2c_dev_addr>0x20</i2c_dev_addr>
+    <i2c_reg_addr>0x09</i2c_reg_addr>
+  </Samd21_I2C_Addr1B_Read>
+
+  <!-- SAMD21 GPIO command -->
+  <Samd21_GPIO_Write class="Samd21GpioCommand">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>write</action>
+    <pin>28</pin>
+    <logic>0</logic>
+  </Samd21_GPIO_Write>
+  <Samd21_GPIO_Read class="Samd21GpioCommand">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <action>read</action>
+    <pin>28</pin>
+  </Samd21_GPIO_Read>
+
+  <!-- FCD command -->
+  <FcdReset class="ResetFcdTask">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <retry_times>5</retry_times>
+  </FcdReset>
+
+  <!-- SLT -->
+  <EnterSLTMode class="EnterSltModeTask">
+    <device_name>TCB</device_name>
+    <delay_after_power_on>60</delay_after_power_on>
+  </EnterSLTMode>
+  <ShutdownDUT class="ShutdownDUTTask">
+    <device_name>TCB</device_name>
+  </ShutdownDUT>
+
+  <RaceDaEraseFlash class="RaceDaEraseFlashTask">
+    <device_name>DUT</device_name>
+    <start_address>0x08000000</start_address>
+    <size>0x1000</size>
+  </RaceDaEraseFlash>
+
+  <RaceDaReadFlash class="RaceDaReadFlashTask">
+    <device_name>DUT</device_name>
+    <bin_filename>D:\\ReadFlash.bin</bin_filename>
+    <start_address>0x08013000</start_address>
+    <length>0xdf4a0</length>
+  </RaceDaReadFlash>
+  
+  <RaceDaReboot class="RaceDaRebootTask">
+    <device_name>DUT</device_name>
+  </RaceDaReboot>
+
+  <RaceDaLockOTP class="RaceDaLockOTPTask">
+    <device_name>DUT</device_name>
+  </RaceDaLockOTP>
+
+  <RaceDaEraseOTP class="RaceDaEraseOTPTask">
+    <device_name>DUT</device_name>
+    <bank>1</bank>
+  </RaceDaEraseOTP>
+
+  <RaceDaGetOTPLockStatus class="RaceDaGetOTPLockStatusTask">
+    <device_name>DUT</device_name>
+  </RaceDaGetOTPLockStatus>
+
+  <RaceDaWriteOTP class="RaceDaWriteOTPTask">
+    <device_name>DUT</device_name>
+    <bin_filename>D:\\WriteOTP.bin</bin_filename>
+    <start_address>256</start_address>
+  </RaceDaWriteOTP>
+
+  <RaceDaReadOTP class="RaceDaReadOTPTask">
+    <device_name>DUT</device_name>
+    <bin_filename>D:\\ReadOTP.bin</bin_filename>
+    <start_address>0</start_address>
+    <length>0</length>
+  </RaceDaReadOTP>
+
+  <RaceDaWriteEfuse class="RaceDaWriteEfuseTask">
+    <device_name>DUT</device_name>
+    <id>0</id>
+    <value>0</value>
+  </RaceDaWriteEfuse>
+
+  <RaceDaReadEfuse class="RaceDaReadEfuseTask">
+    <device_name>DUT</device_name>
+    <id>0</id>
+  </RaceDaReadEfuse>
+
+  <WriteDa class="WriteDaTask">
+    <device_name>DUT</device_name>
+    <da_file>.\DaCode\ab1568_da.bin</da_file>
+    <bypass_handshake>false</bypass_handshake>
+    <tcb_reset_dut>true</tcb_reset_dut>
+    <chip_id>AB1568</chip_id>
+  </WriteDa>
+
+  <!-- one wire fota command -->
+  <BootloaderHandshake class="BootloaderHandshakeTask">
+    <device_name>DUT</device_name>
+    <bypass_handshake>false</bypass_handshake>
+    <tcb_reset_dut>false</tcb_reset_dut>
+  </BootloaderHandshake>
+
+  <OneWireFota class="OneWireFotaTask">
+    <device_name>DUT</device_name>
+    <fota_package_filename></fota_package_filename>
+    <check_pre_version></check_pre_version>
+    <check_post_version></check_post_version>
+    <is_update_nvr>false</is_update_nvr>
+    <is_update_devname>false</is_update_devname>
+    <devname_nvr_filename></devname_nvr_filename>
+    <nvr_filename></nvr_filename>
+  </OneWireFota>
+  
+  <UartSetRts class="UartSetRtsTask">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <is_high>true</is_high>
+  </UartSetRts>
+  
+  <UartSetDtr class="UartSetDtrTask">
+    <device_type>UART</device_type>
+    <device_name>DUT</device_name>
+    <is_high>true</is_high>
+  </UartSetDtr>
+
+</api_tasks>

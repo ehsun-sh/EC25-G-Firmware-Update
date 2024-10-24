@@ -1,0 +1,1 @@
+flashimage.exe --productdir E:\Python\AG509MEUAAR01A01V02T4G

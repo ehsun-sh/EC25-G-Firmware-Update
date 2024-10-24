@@ -1,0 +1,11 @@
+device EFR32FG12PXXXF1024
+usb 0
+si 1
+speed 9600
+erase
+sleep 400
+loadfile "D:\38-QDM002-NA\A4CellMfg_0_2.hex"
+sleep 100
+r
+g
+q

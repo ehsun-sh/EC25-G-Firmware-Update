@@ -1,0 +1,48 @@
+{
+ "HashAlgorithm": "SHA256",
+ "imageinfo": [
+  {
+   "addr": 0,
+   "file": "ban_old_tool_poison.bin",
+   "flashsize": 0,
+   "hash": "0",
+   "type": "VIRTUALIMG"
+  },
+  {
+   "addr": 8400896,
+   "file": "ap_bootloader.bin",
+   "flashsize": 131072,
+   "hash": "161F5B327123A3DE2272BEB2379538B614D1C22CD2554B77758CE8240D7174B1",
+   "type": "BL"
+  },
+  {
+   "addr": 9494528,
+   "file": "ap_at_command.bin",
+   "flashsize": 4268032,
+   "hash": "1862D484C4658CFA952E23D6E6C575F847EBBE1AE2ED5BC51196A7D961BC6202",
+   "type": "AP"
+  },
+  {
+   "addr": 8650752,
+   "file": "cp-demo-flash.bin",
+   "flashsize": 843776,
+   "hash": "6A8824C07D1D3E4C20CEBB80DB6305DFC28AABCB23E453EA37CDE9AF45E1D43C",
+   "type": "CP"
+  }
+ ],
+ "imagepath": "C:\\Users\\ivan\\Documents\\projects\\ec616_00\\release_ec616_01\\jwzhuang20191121_20191031_flashtoolcli\\FlashToolsEC618\\FlashToolCLI_V4.1.8_20231109\\image_ec217\\pkgdir\\pkg_extract_tmp/",
+ "pkgarg": {
+  "pkgmode": 1,
+  "productname": "QCX217_PRD"
+ },
+ "version": "111",
+ "ExtractSyncRec": {
+  "LastSyncTime": 1699860303,
+  "LastSyncStat": 1,
+  "PackagePath": "C:\\Users\\ivan\\Documents\\projects\\ec616_00\\release_ec616_01\\jwzhuang20191121_20191031_flashtoolcli\\FlashToolsEC618\\FlashToolCLI_V4.1.8_20231109\\image_ec217\\pkgdir\\at_command.binpkg",
+  "PackageExtDir": "C:\\Users\\ivan\\Documents\\projects\\ec616_00\\release_ec616_01\\jwzhuang20191121_20191031_flashtoolcli\\FlashToolsEC618\\FlashToolCLI_V4.1.8_20231109\\image_ec217\\pkgdir\\pkg_extract_tmp",
+  "PackageModTime": 1695091275,
+  "PackageSize": 2303884,
+  "PackageHash": "eb603cded5d66de2e44190cdf58d81d5b9db2a807b8a5e0c69989012da359f05"
+ }
+}

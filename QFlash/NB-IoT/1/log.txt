@@ -1,0 +1,2 @@
+UE Updater CommandLine v3.36.0.2 
+Sorry - something went wrong - System.InvalidOperationException Attempting to read a file as a firmware package failed as it identifies as a 00000000-0000-0000-0000-000000000000 file and not a firmware package

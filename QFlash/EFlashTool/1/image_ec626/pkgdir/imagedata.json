@@ -1,0 +1,25 @@
+{
+	"HashAlgorithm" : "SHA256",
+	"imageinfo" : 
+	[
+		{
+			"addr" : 16384,
+			"file" : "ap_bootloader.bin",
+			"hash" : "3C0407F6C4F246E17839D3AA93310B3BDD79070266597C8345DFAE191F84CC37",
+			"type" : "BL"
+		},
+		{
+			"addr" : 147456,
+			"file" : "ap_at_command.bin",
+			"hash" : "56C1F6BB6BC0DE3202D66A247A75E32C56171AAB417C21C686C5CBD86F81C636",
+			"type" : "AP"
+		},
+		{
+			"addr" : 0,
+			"file" : "cp-demo-flash.bin",
+			"hash" : "047B1815D744E1D34C428D54ABC44391EEF779E3C540D5050E744138336B2AD1",
+			"type" : "CP"
+		}
+	],
+	"imagepath" : "C:\\Users\\ivan\\Documents\\projects\\ec616_00\\ec626\\ASIC\\FlashTools_ec626_ASIC\\image_ec626\\pkgdir\\pkg_extract_tmp\\"
+}

@@ -1,0 +1,45 @@
+2023-09-08 14:08:49
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp\ap_bootloader.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\legacy_product\618_legacy\ap_bootloader.bin
+2023-09-08 14:08:49
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp\ap_at_command.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\legacy_product\618_legacy\ap_demo-flash.bin
+2023-09-08 14:08:49
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp\cp-demo-flash.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\legacy_product\618_legacy\cp-demo-flash.bin
+2023-09-08 14:14:20
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp\ap_bootloader.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\legacy_product\618_legacy\ap_bootloader.bin
+2023-09-08 14:14:20
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp\ap_at_command.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\legacy_product\618_legacy\ap_demo-flash.bin
+2023-09-08 14:14:20
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\pkgdir\pkg_extract_tmp\cp-demo-flash.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.4p01_20230825\image_ec618\legacy_product\618_legacy\cp-demo-flash.bin
+2023-11-10 14:27:12
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\pkgdir\pkg_extract_tmp\ap_bootloader.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\legacy_product\618_legacy\ap_bootloader.bin
+2023-11-10 14:27:12
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\pkgdir\pkg_extract_tmp\ap_at_command.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\legacy_product\618_legacy\ap_demo-flash.bin
+2023-11-10 14:27:12
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\pkgdir\pkg_extract_tmp\cp-demo-flash.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\release_ec616_01\jwzhuang20191121_20191031_flashtoolcli\FlashToolsEC618\FlashToolCLI_V4.1.8_20231109\image_ec618\legacy_product\618_legacy\cp-demo-flash.bin

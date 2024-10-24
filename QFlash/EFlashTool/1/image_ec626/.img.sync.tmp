@@ -1,0 +1,10 @@
+2023-01-09 10:27:51
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\ec626\ASIC\FlashTools_ec626_ASIC\image_ec626\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\ec626\ASIC\FlashTools_ec626_ASIC\image_ec626\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\ec626\ASIC\FlashTools_ec626_ASIC\image_ec626\pkgdir\pkg_extract_tmp\ap_bootloader.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\ec626\ASIC\FlashTools_ec626_ASIC\image_ec626\bootloader.bin
+2023-01-09 10:27:51
+ImageInfo:C:\Users\ivan\Documents\projects\ec616_00\ec626\ASIC\FlashTools_ec626_ASIC\image_ec626\pkgdir\imagedata.json
+ExtractDir:C:\Users\ivan\Documents\projects\ec616_00\ec626\ASIC\FlashTools_ec626_ASIC\image_ec626\pkgdir\pkg_extract_tmp
+SYNC SRC: C:\Users\ivan\Documents\projects\ec616_00\ec626\ASIC\FlashTools_ec626_ASIC\image_ec626\pkgdir\pkg_extract_tmp\ap_at_command.bin
+SYNC TGT: C:\Users\ivan\Documents\projects\ec616_00\ec626\ASIC\FlashTools_ec626_ASIC\image_ec626\ap_demo-flash.bin
